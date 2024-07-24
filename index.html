@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange Distribution</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-8">
+    <div class="max-w-md mx-auto bg-cyan-400 p-6 rounded-lg shadow-xl">
+        <h1 class="text-xl font-bold mb-4">Orange Distribution Calculator</h1>
+        <form id="distributionForm">
+            <div class="mb-4">
+                <label for="age" class="block text-gray-700 text-sm font-bold mb-2">Select Age Group of a Person</label>
+                <select id="age" class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <option>SELECT</option>
+                    <option value="15">0-11</option>
+                    <option value="10">12-19</option>
+                    <option value="8">20-34</option>
+                    <option value="5">35-44</option>
+                    <option value="0">45 and above</option>
+                </select>
+                <label for="gender" class="block text-gray-700 text-sm font-bold mb-2 mt-4">Select Gender</label>
+                <select id="gender" class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <option>SELECT</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                </select>
+                <label for="trivial" class="block text-gray-700 text-sm font-bold mb-2 mt-4">Ethnicity?</label>
+                <select id="trivial" class="block appearance-none w-full border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500">
+                    <option>SELECT</option>
+                    <option value="non-trivial">Non-Tribal</option>
+                    <option value="trivial">Tribal</option>
+                </select>
+                <p>Total Quantity of Oranges: <input type="text" id="totalOranges" class="block w-full border border-gray-200 text-gray-700 py-2 px-3 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></input></p>
+                <p>Total People: <input type="text" id="totalPeople" class="block w-full border border-gray-200 text-gray-700 py-2 px-3 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500"></input></p>
+            </div>
+            <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Calculate</button>
+            <div class="mt-4">
+                <p>No. of Oranges Allowed per Person: <span id="orangesAllowed">?</span></p>
+                <p>Remaining Quantity of Oranges: <span id="remainingOranges">?</span></p>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="scripts.js"></script>
+</html>
